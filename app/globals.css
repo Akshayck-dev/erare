@@ -24,17 +24,14 @@
   box-sizing: border-box;
 }
 
-html {
+html, body {
   background: var(--background);
-  scroll-behavior: smooth;
-}
-
-body {
   margin: 0;
-  background: var(--background);
   color: var(--foreground);
   font-family: var(--font-inter), Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+  height: 100%;
 }
 
 button,
@@ -93,8 +90,8 @@ input {
 }
 
 .brand-logo img {
-  width: 24px;
-  height: 24px;
+  width: 36px;
+  height: 36px;
   object-fit: contain;
   mix-blend-mode: screen;
   filter: drop-shadow(0 0 8px rgba(229, 9, 20, 0.5));
@@ -185,10 +182,16 @@ input {
   z-index: -2;
 }
 
+@keyframes slowZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}
+
 .hero-bg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  animation: slowZoom 20s ease-in-out infinite alternate;
 }
 
 .hero-content {
@@ -742,4 +745,28 @@ input {
   .category-grid {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
+}
+
+/* MINIMAL FOOTER */
+.minimal-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 24px 4.5vw;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  z-index: 100;
+}
+
+.minimal-footer a {
+  color: var(--foreground);
+  opacity: 0.6;
+  transition: opacity 0.3s, color 0.3s;
+}
+
+.minimal-footer a:hover {
+  color: var(--accent-red);
+  opacity: 1;
 }

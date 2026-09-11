@@ -38,26 +38,13 @@ export default function Page() {
 
   return (
     <main className="premium-layout">
-      {/* 1. PREMIUM NAVBAR */}
       <nav className={`premium-navbar ${scrolled ? 'scrolled' : ''}`}>
         <a href="#top" className="brand-logo" aria-label="ERARE home">
-          <img src={logoUrl} alt="" />
-          <span>ERARE</span>
+          <img src={logoUrl} alt="ERARE" />
         </a>
         
-        <div className="nav-links">
-          <a href="#top">Home</a>
-          <a href="#categories">Categories</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-        </div>
-        
         <div className="nav-actions">
-          <button className="icon-btn" aria-label="Search"><Search size={20} strokeWidth={1.5} /></button>
-          <button className="icon-btn" aria-label="Account"><User size={20} strokeWidth={1.5} /></button>
-          <button className="icon-btn" aria-label="Cart"><ShoppingCart size={20} strokeWidth={1.5} /></button>
           <button className="notify-btn">Notify Me</button>
-          <button className="mobile-menu-btn" aria-label="Menu"><Menu size={24} /></button>
         </div>
       </nav>
 
@@ -69,136 +56,13 @@ export default function Page() {
         </picture>
       </section>
 
-      {/* 3. INTRODUCTION SECTION */}
-      <section className="intro-section" id="about">
-        <div className="container intro-content">
-          <span className="section-eyebrow">The Erare Experience</span>
-          <h2 className="intro-heading">ONE PLACE. ENDLESS CHOICE.</h2>
-          <p className="intro-desc">
-            ERARE brings together distinctive products, emerging brands and everyday essentials across a world of categories — curated for the curious.
-          </p>
-        </div>
-      </section>
-
-      {/* 4. WHY ERARE SECTION */}
-      <section className="features-section">
-        <div className="container">
-          <div className="features-header">
-            <span className="section-eyebrow">Why E Rare</span>
-          </div>
-          <div className="features-grid">
-            <div className="feature-block">
-              <span className="feature-number">01 — CURATED CHOICE</span>
-              <h3 className="feature-title">Beyond Ordinary</h3>
-              <p className="feature-desc">Discover products selected beyond the ordinary. We believe in quality over quantity, bringing you the finest selection.</p>
-            </div>
-            <div className="feature-block">
-              <span className="feature-number">02 — EVERY CATEGORY</span>
-              <h3 className="feature-title">Endless Variety</h3>
-              <p className="feature-desc">From fashion and beauty to technology, books, travel and more. Everything you need, unified in one marketplace.</p>
-            </div>
-            <div className="feature-block">
-              <span className="feature-number">03 — PREMIUM EXPERIENCE</span>
-              <h3 className="feature-title">Designed for You</h3>
-              <p className="feature-desc">Designed around simplicity, discovery and quality. A frictionless journey from inspiration to possession.</p>
-            </div>
-            <div className="feature-block">
-              <span className="feature-number">04 — MADE FOR THE CURIOUS</span>
-              <h3 className="feature-title">Discover What's Next</h3>
-              <p className="feature-desc">For people who always want to discover what's next. Join a community of forward-thinkers and early adopters.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. CATEGORY SHOWCASE */}
-      <section className="categories-section" id="categories">
-        <div className="container">
-          <div className="categories-header">
-            <h2 className="intro-heading">DISCOVER WHAT'S COMING</h2>
-          </div>
-          <div className="category-grid">
-            {categories.map((cat, index) => (
-              <div className="category-card" key={index}>
-                <img src={cat.image} alt={cat.name} className="category-img" />
-                <div className="category-overlay"></div>
-                <div className="category-content">
-                  <h3 className="category-title">{cat.name}</h3>
-                  <ArrowRight className="category-arrow" size={24} strokeWidth={2} />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 6. EDITORIAL BRAND SECTION */}
-      <section className="editorial-section">
-        <div className="container editorial-container">
-          <div className="editorial-left">
-            <h2 className="editorial-heading">NOT JUST ANOTHER<br />MARKETPLACE.</h2>
-          </div>
-          <div className="editorial-right">
-            <p className="editorial-desc">
-              ERARE is designed around discovery, variety and uncommon choices. We are redefining the e-commerce landscape by prioritizing curation and aesthetic excellence. It is a destination where the ordinary is left behind.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* 7. COMING SOON SECTION */}
-      <section className="coming-soon-section" id="contact">
-        <div className="coming-soon-glow"></div>
-        <div className="container coming-soon-content">
-          <h2 className="cs-heading">SOMETHING RARE IS COMING.</h2>
-          <p className="cs-desc">Be the first to know when ERARE opens its doors.</p>
-          <form className="cs-form" onSubmit={(e) => e.preventDefault()}>
-            <input type="email" placeholder="Enter your email address" className="cs-input" required />
-            <button type="submit" className="cs-btn">Notify Me</button>
-          </form>
-        </div>
-      </section>
-
-      {/* 8. FINAL BRAND STATEMENT */}
-      <section className="final-brand-section">
-        <h2 className="final-statement">MADE FOR THE CURIOUS.</h2>
-        <span className="final-year">ERARE / 2026</span>
-      </section>
-
-      {/* 9. FOOTER */}
-      <footer className="site-footer">
-        <div className="footer-top">
-          <a href="#top" className="brand-logo" aria-label="ERARE home">
-            <img src={logoUrl} alt="" />
-            <span>ERARE</span>
-          </a>
-          
-          <div className="footer-nav">
-            <div className="footer-col">
-              <span className="footer-col-title">Navigation</span>
-              <a href="#about">About</a>
-              <a href="#categories">Categories</a>
-              <a href="#contact">Contact</a>
-            </div>
-            <div className="footer-col">
-              <span className="footer-col-title">Legal</span>
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms of Service</a>
-            </div>
-            <div className="footer-col">
-              <span className="footer-col-title">Social</span>
-              <a href="#" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><InstagramIcon /> Instagram</a>
-              <a href="#" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><FacebookIcon /> Facebook</a>
-              <a href="#" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><LinkedinIcon /> LinkedIn</a>
-            </div>
-          </div>
-        </div>
-        
-        <div className="footer-bottom">
-          <span>&copy; 2026 ERARE. All rights reserved.</span>
-          <span>A RARE ERA OF CHOICE.</span>
-        </div>
+      {/* MINIMAL FOOTER */}
+      <footer className="minimal-footer">
+        <a href="#" aria-label="Instagram"><InstagramIcon /></a>
+        <a href="#" aria-label="Facebook"><FacebookIcon /></a>
+        <a href="#" aria-label="LinkedIn"><LinkedinIcon /></a>
       </footer>
+
     </main>
   )
 }
