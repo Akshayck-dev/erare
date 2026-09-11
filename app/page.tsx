@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react'
 import { Search, User, ShoppingCart, Menu, X, ArrowRight } from 'lucide-react'
-import { GradualSpacing } from '@/components/ui/gradual-spacing'
 
 const InstagramIcon = () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>;
 const FacebookIcon = () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>;
@@ -194,7 +193,7 @@ export default function Page() {
       <section className="editorial-section">
         <div className="container editorial-container">
           <div className="editorial-left reveal">
-            <GradualSpacing text="NOT JUST ANOTHER MARKETPLACE." className="editorial-heading" />
+            <h2 className="editorial-heading">NOT JUST ANOTHER<br />MARKETPLACE.</h2>
           </div>
           <div className="editorial-right reveal reveal-delay-2">
             <p className="editorial-desc">
@@ -208,7 +207,7 @@ export default function Page() {
       <section className="coming-soon-section" id="contact">
         <div className="coming-soon-glow"></div>
         <div className="container coming-soon-content reveal">
-          <GradualSpacing text="SOMETHING RARE IS COMING." className="cs-heading" />
+          <h2 className="cs-heading">SOMETHING RARE IS COMING.</h2>
           <p className="cs-desc">Be the first to know when ERARE opens its doors.</p>
           <form className="cs-form" onSubmit={(e) => e.preventDefault()}>
             <input type="email" placeholder="Enter your email address" className="cs-input" required />
@@ -219,7 +218,7 @@ export default function Page() {
 
       {/* 8. FINAL BRAND STATEMENT */}
       <section className="final-brand-section reveal">
-        <GradualSpacing text="MADE FOR THE CURIOUS." className="final-statement" />
+        <h2 className="final-statement">MADE FOR THE CURIOUS.</h2>
         <span className="final-year">ERARE / 2026</span>
       </section>
 
