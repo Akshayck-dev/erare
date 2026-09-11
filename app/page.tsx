@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { Search, User, ShoppingCart, Menu, ArrowRight } from 'lucide-react'
+import { Search, User, ShoppingCart, Menu, X, ArrowRight } from 'lucide-react'
 
 const InstagramIcon = () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>;
 const FacebookIcon = () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>;
@@ -27,6 +27,7 @@ const categories = [
 
 export default function Page() {
   const [scrolled, setScrolled] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -82,7 +83,40 @@ export default function Page() {
           <button className="icon-btn" aria-label="Cart"><ShoppingCart size={20} strokeWidth={1.5} /></button>
           <button className="notify-btn">Notify Me</button>
         </div>
+
+        <button 
+          className="mobile-menu-btn" 
+          aria-label="Toggle menu"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </nav>
+
+      {/* MOBILE SIDE DRAWER */}
+      <div className={`mobile-drawer-overlay ${menuOpen ? 'open' : ''}`} onClick={() => setMenuOpen(false)}></div>
+      <aside className={`mobile-drawer ${menuOpen ? 'open' : ''}`}>
+        <div className="drawer-header">
+          <a href="#top" className="brand-logo" onClick={() => setMenuOpen(false)}>
+            <img src={logoUrl} alt="ERARE" />
+          </a>
+          <button className="drawer-close-btn" onClick={() => setMenuOpen(false)} aria-label="Close menu">
+            <X size={24} />
+          </button>
+        </div>
+
+        <div className="drawer-links">
+          <a href="#top" onClick={() => setMenuOpen(false)}>Home</a>
+          <a href="#categories" onClick={() => setMenuOpen(false)}>Categories</a>
+          <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
+          <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+        </div>
+
+        <div className="drawer-footer">
+          <button className="notify-btn" onClick={() => setMenuOpen(false)}>Notify Me</button>
+          <span className="drawer-tagline">A RARE ERA OF CHOICE</span>
+        </div>
+      </aside>
 
       {/* 2. HERO SECTION */}
       <section className="hero-section" id="top">
