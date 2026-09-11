@@ -9,20 +9,20 @@ const LinkedinIcon = () => <svg width="16" height="16" viewBox="0 0 24 24" fill=
 
 const wideBackground = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Sep%2010%2C%202026%2C%2009_48_21%20PM%20%282%29-xVEKY9Z39fS3nFQdGpqJynky64nhID.png'
 const tallBackground = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Sep%2010%2C%202026%2C%2009_52_05%20PM%20%281%29-suNTE2LEyqKj4AH9ysfA151VrfZx4P.png'
-const logoUrl = '/logo.png'
+const logoUrl = '/logo.webp'
 
 const categories = [
-  { name: 'Fashion', image: '/category_fashion_1789097636790.png' },
-  { name: 'Beauty', image: '/category_beauty_1789097655065.png' },
-  { name: 'Electronics', image: '/category_electronics_1789097794523.png' },
-  { name: 'Appliances', image: '/category_appliances_1789097809334.png' },
-  { name: 'Books', image: '/category_books_1789097825856.png' },
-  { name: 'Travel', image: '/category_travel_1789097850598.png' },
-  { name: 'Sports', image: '/category_sports_1789097865594.png' },
-  { name: 'Education', image: '/category_education_1789097878894.png' },
-  { name: 'Art & Craft', image: '/category_art_craft_1789098018543.png' },
-  { name: 'Health', image: '/category_health_1789098033786.png' },
-  { name: 'Toys', image: '/category_toys_1789098046989.png' },
+  { name: 'Fashion', image: '/category_fashion_1789097636790.webp' },
+  { name: 'Beauty', image: '/category_beauty_1789097655065.webp' },
+  { name: 'Electronics', image: '/category_electronics_1789097794523.webp' },
+  { name: 'Appliances', image: '/category_appliances_1789097809334.webp' },
+  { name: 'Books', image: '/category_books_1789097825856.webp' },
+  { name: 'Travel', image: '/category_travel_1789097850598.webp' },
+  { name: 'Sports', image: '/category_sports_1789097865594.webp' },
+  { name: 'Education', image: '/category_education_1789097878894.webp' },
+  { name: 'Art & Craft', image: '/category_art_craft_1789098018543.webp' },
+  { name: 'Health', image: '/category_health_1789098033786.webp' },
+  { name: 'Toys', image: '/category_toys_1789098046989.webp' },
 ]
 
 export default function Page() {
