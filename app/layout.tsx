@@ -4,7 +4,7 @@ import { Cormorant_Garamond, Inter } from 'next/font/google'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
-const cormorant = Cormorant_Garamond({ subsets: ['latin'], variable: '--font-cormorant' })
+const cormorant = Cormorant_Garamond({ subsets: ['latin'], weight: ['300', '400', '500', '600'], variable: '--font-cormorant' })
 
 export const metadata: Metadata = {
   title: 'Erare — A rare era of choice',
