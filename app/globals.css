@@ -88,6 +88,7 @@ input {
 }
 
 .brand-logo {
+  flex: 1;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -761,11 +762,8 @@ input {
 
 @media (max-width: 768px) {
   .nav-links,
-  .nav-actions .notify-btn {
-    display: none;
-  }
-  .mobile-menu-btn {
-    display: block;
+  .nav-actions {
+    display: none !important;
   }
   .hero-ctas {
     flex-direction: column;

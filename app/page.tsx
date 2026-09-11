@@ -68,6 +68,20 @@ export default function Page() {
         <a href="#top" className="brand-logo" aria-label="ERARE home">
           <img src={logoUrl} alt="ERARE" />
         </a>
+        
+        <div className="nav-links">
+          <a href="#top">Home</a>
+          <a href="#categories">Categories</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+        
+        <div className="nav-actions">
+          <button className="icon-btn" aria-label="Search"><Search size={20} strokeWidth={1.5} /></button>
+          <button className="icon-btn" aria-label="Account"><User size={20} strokeWidth={1.5} /></button>
+          <button className="icon-btn" aria-label="Cart"><ShoppingCart size={20} strokeWidth={1.5} /></button>
+          <button className="notify-btn">Notify Me</button>
+        </div>
       </nav>
 
       {/* 2. HERO SECTION */}
