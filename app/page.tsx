@@ -9,7 +9,7 @@ const LinkedinIcon = () => <svg width="16" height="16" viewBox="0 0 24 24" fill=
 
 const wideBackground = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Sep%2010%2C%202026%2C%2009_48_21%20PM%20%282%29-xVEKY9Z39fS3nFQdGpqJynky64nhID.png'
 const tallBackground = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Sep%2010%2C%202026%2C%2009_52_05%20PM%20%281%29-suNTE2LEyqKj4AH9ysfA151VrfZx4P.png'
-const logoUrl = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Asset%201%20%281%29-9vKnR7Vqhayept4DpB9a0ZrINu2bWX.png'
+const logoUrl = '/logo.png'
 
 const categories = [
   { name: 'Fashion', image: '/category_fashion_1789097636790.png' },
@@ -43,9 +43,7 @@ export default function Page() {
           <img src={logoUrl} alt="ERARE" />
         </a>
         
-        <div className="nav-actions">
-          <button className="notify-btn">Notify Me</button>
-        </div>
+
       </nav>
 
       {/* 2. HERO SECTION */}

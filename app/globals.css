@@ -59,42 +59,44 @@ input {
 .premium-navbar {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  z-index: 100;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 24px 4.5vw;
-  transition: background 0.3s ease, border-bottom 0.3s ease;
-  border-bottom: 1px solid transparent;
+  align-items: center;
+  padding: 40px 4.5vw;
+  z-index: 100;
+  background: transparent;
+  transition: background 0.4s ease, padding 0.4s ease;
 }
 
 .premium-navbar.scrolled {
   background: rgba(5, 5, 5, 0.85);
   backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  padding: 24px 4.5vw;
   border-bottom: 1px solid var(--border);
 }
 
-.brand-logo {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--foreground);
-  text-decoration: none;
-  font-size: 14px;
-  letter-spacing: 0.3em;
-  font-weight: 600;
-  text-transform: uppercase;
+@keyframes floatAndGlow {
+  0% {
+    transform: translateY(0);
+    filter: drop-shadow(0 0 8px rgba(229, 9, 20, 0.4));
+  }
+  50% {
+    transform: translateY(-4px);
+    filter: drop-shadow(0 0 16px rgba(229, 9, 20, 0.9));
+  }
+  100% {
+    transform: translateY(0);
+    filter: drop-shadow(0 0 8px rgba(229, 9, 20, 0.4));
+  }
 }
 
 .brand-logo img {
-  width: 36px;
-  height: 36px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
   mix-blend-mode: screen;
-  filter: drop-shadow(0 0 8px rgba(229, 9, 20, 0.5));
+  animation: floatAndGlow 4s ease-in-out infinite;
 }
 
 .nav-links {
