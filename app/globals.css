@@ -765,6 +765,23 @@ input {
   .nav-actions {
     display: none !important;
   }
+  .premium-navbar {
+    padding: 20px 5vw;
+  }
+  .premium-navbar.scrolled {
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    background: rgba(5, 5, 5, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: none;
+    padding: 16px 5vw;
+  }
   .hero-ctas {
     flex-direction: column;
     width: 100%;
