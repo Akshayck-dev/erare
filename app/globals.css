@@ -144,11 +144,13 @@ input {
   border-radius: 2px;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
   color: #ffffff;
 }
 
-.nav-links a:hover::after {
+.nav-links a:hover::after,
+.nav-links a.active::after {
   width: 100%;
 }
 
@@ -212,11 +214,10 @@ input {
 .hero-section {
   position: relative;
   width: 100%;
-  height: clamp(700px, 100vh, 900px);
+  height: clamp(520px, 82vh, 780px);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 80px;
   overflow: hidden;
   isolation: isolate;
 }
