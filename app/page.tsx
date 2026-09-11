@@ -38,6 +38,14 @@ export default function Page() {
 
   return (
     <main className="premium-layout">
+      {/* SPLASH SCREEN */}
+      <div className="splash-screen">
+        <div className="splash-logo-container">
+          <img src={logoUrl} className="splash-logo-white" alt="" />
+          <img src={logoUrl} className="splash-logo-red" alt="" />
+        </div>
+      </div>
+
       <nav className={`premium-navbar ${scrolled ? 'scrolled' : ''}`}>
         <a href="#top" className="brand-logo" aria-label="ERARE home">
           <img src={logoUrl} alt="ERARE" />
