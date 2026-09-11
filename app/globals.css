@@ -88,6 +88,7 @@ input {
 }
 
 .brand-logo {
+  flex: 1;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -117,6 +118,7 @@ input {
   display: flex;
   gap: 36px;
   align-items: center;
+  justify-content: center;
 }
 
 .nav-links a {
@@ -153,8 +155,10 @@ input {
 }
 
 .nav-actions {
+  flex: 1;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 20px;
 }
 
